@@ -7,8 +7,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello JenAndDarren!</title>
+    <title>Welcome to Jen and Darren's Wedding Website!</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <%= render_existing @view_module, "scripts.html", assigns %>
   </head>
 
   <body>
