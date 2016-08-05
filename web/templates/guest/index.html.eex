@@ -1,0 +1,18 @@
+<h2>Listing guests</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Attending</th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for guest <- @guests do %>
+    <tr>
+      <td><%= guest.name %></td>
+      <td><%= guest.attending %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>

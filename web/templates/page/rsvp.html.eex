@@ -1,0 +1,30 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :name, class: "control-label" %>
+    <%= text_input f, :name, class: "form-control" %>
+    <%= error_tag f, :name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :attending, class: "control-label" %>
+    <div>
+      <%= label f, :attending_true, class: "radio-inline" do %>
+        <%= radio_button f, :attending, true, checked: false %> Yes
+      <% end %>
+      <%= label f, :attending_false, class: "radio-inline" do %>
+        <%= radio_button f, :attending, false, checked: false %> No
+      <% end %>
+    </div>
+    <%= error_tag f, :attending %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

@@ -1,4 +1,8 @@
 <div>
   <h2><%= gettext "Welcome to %{name}", name: "Jen and Darren's Wedding Website!" %></h2>
   <div id="map"></div>
+
+  <h2>RSVP</h2>
+  <%= render "rsvp.html", changeset: @changeset,
+                          action: guest_path(@conn, :create) %>
 </div>
