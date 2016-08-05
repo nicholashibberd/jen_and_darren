@@ -11,7 +11,7 @@
 <%= for guest <- @guests do %>
     <tr>
       <td><%= guest.name %></td>
-      <td><%= guest.attending %></td>
+      <td><%= if guest.attending, do: "Yes", else: "No" %></td>
     </tr>
 <% end %>
   </tbody>
